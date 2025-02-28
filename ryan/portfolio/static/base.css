@@ -1,0 +1,44 @@
+* {
+    font-family: pixelify sans;
+    box-sizing: border-box;
+    /* text-transform: lowercase; */
+}
+
+#menuBar{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+
+}
+
+#menuBar li{
+    list-style: none;
+    display: flex;
+}
+
+li:hover{
+    background-color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding:  1.5rem;
+}
+
+li:hover a {    
+    color: black;
+}
+
+footer{
+    position:absolute;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color:  black;
+    width: 100vw;
+    color: whitesmoke;
+}

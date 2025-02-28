@@ -1,0 +1,18 @@
+.content{
+    display: flex;
+}
+
+.heading{
+    font-size: x-small;
+    margin-block: 0;
+    font-weight: 600;
+}
+.right{
+    display : flex;
+    flex-direction: column;
+}
+
+.data{
+    font-size:large;
+    font-weight: bolder;
+}
