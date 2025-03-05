@@ -1,12 +1,20 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}HMU [ HIT ME UP ] {% endblock %}
+{% block stylesheet %} <link rel="stylesheet" href="{% static 'hmu.css' %}">{% endblock stylesheet %}
 {% block content %}
-    <div>
-        <p>phone number : +2547 400 78 905</p>
-        <p>instagram : njoroge_art</p>
-        <p> fb : njoro_wa_art</p>
-        
-        
-       
+    <div class='container'>
+        <div class='contactInfo'>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Message</button>
+            </form>
+        </div>
+        <div>
+            <p>phone number : +2547 400 78 905</p>
+            <p>instagram : njoroge_art</p>
+            <p> fb : njoro_wa_art</p>  
+        </div>
     </div>
 {% endblock %}

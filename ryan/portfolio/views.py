@@ -5,6 +5,8 @@ from django.core.paginator import Paginator
 from django.contrib.auth import logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
+from .models import Contact_info
+from .forms import Contact_form
 # from .models import Item, Appraisal, Exchange, Rating, Category, CustomUser, ActivityLog, Notification, Message
 # from .forms import ProfileForm, RegistrationForm
 # from .forms import ItemForm, AppraisalForm, ExchangeForm, RatingForm, CategoryForm
@@ -29,8 +31,16 @@ def about(request):
 
 # hmu view [ hit me up ]
 def hmu(request):
-    return render(request, 'hmu.html', {'user': request.user})
+    if request.method == 'POST':
+        form = Contact_form(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = Contact_form()
+    return render(request, 'hmu.html', {'form' : form})
 
-
-
+# shop view 
+def shop(request):
+    return render(request, 'shop.html', {'user': request.user})
 
