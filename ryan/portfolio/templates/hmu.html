@@ -3,18 +3,97 @@
 {% block title %}HMU [ HIT ME UP ] {% endblock %}
 {% block stylesheet %} <link rel="stylesheet" href="{% static 'hmu.css' %}">{% endblock stylesheet %}
 {% block content %}
+    <h1>Contact Us</h1>
     <div class='container'>
+        <h1>HMU for more info...</h1>
         <div class='contactInfo'>
             <form method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Message</button>
+                <label for="firstname">First Name : </label> {{ form.first_name }}
+                <label for="secondname">Second Name : </label> {{ form.second_name }}
+                <label for="email">Email : </label>{{ form.email }}
+                <!-- <label for="message">Message :<textarea name="" id=""></textarea></label> -->
+                <label for="email">Message :</label>{{ form.message }}
+
+                <button class="btn" type="submit">Message</button>
             </form>
         </div>
-        <div>
-            <p>phone number : +2547 400 78 905</p>
-            <p>instagram : njoroge_art</p>
-            <p> fb : njoro_wa_art</p>  
+        <div class="socialMedia">
+            <p>phone number : +2541-0586-9146
+                <a href="https://wa.me/c/254105869146" target="_blank">
+                    <img src="{% static 'img/logos/whatsapp_black.svg'%}" /> 
+                 </a>
+            </p>
+            <p>email :
+                <a href="https://mail.google.com/mail/?view=cm&to=kaparocorp@gmail.com&su=SUBJECT&body=BODY&bcc=dakota@example.com" target="_blank">
+                    <img src="{% static 'img/logos/email.svg'%}" /> 
+                 </a>   
+            </p>
+            <p>instagram :  NjoRaw wa Art
+                <a href="https://www.instagram.com/njoraw_art" target="_blank">
+                    <img src="{% static 'img/logos/instagram_black.svg'%}" /> 
+                 </a>
+            </p>
+            <p> fb : NjoRaw wa Art 
+                <a href="https://web.facebook.com/people/NjoRaw-Wa-Art/pfbid02ESdJ9i8xATRfYifBRti6h6mfdS7sd4oYEgKXcQWXm3BDR25VZnYpaJYuphRKtRpBl/" target="_blank">
+                    <img src="{% static 'img/logos/fb_black.svg'%}" /> 
+                 </a>   
+            </p>  
+            <p> discord_server 
+                <a href="https://discord.gg/8Thqgvpw" target="_blank">
+                    <img src="{% static 'img/logos/discord_black.svg'%}" /> 
+                 </a>
+            </p>  
+            <p> reddit : 
+                <a href="https://www.reddit.com/user/itsKaparo/" target="_blank">
+                    <img src="{% static 'img/logos/reddit_black.svg'%}" /> 
+                 </a>
+            </p> 
+            <p> linkedin : 
+                <a href="https://www.linkedin.com/in/ryan-njoroge/" target="_blank">
+                    <img src="{% static 'img/logos/linkedin_black.svg'%}" /> 
+                 </a>
+            </p> 
+            <p> telegram : 
+                <a href="https://www.reddit.com/user/itsKaparo/" target="_blank">
+                    <img src="{% static 'img/logos/telegram_black.svg'%}" /> 
+                 </a>
+            </p> 
+            <p> pintrest : 
+                <a href="https://www.pinterest.com/kaparocorp/_profile/" target="_blank">
+                    <img src="{% static 'img/logos/pinterest_black.svg'%}" /> 
+                 </a>
+            </p> 
+            <p> behance  : 
+                <a href="https://www.behance.net/ryannjoroge1" target="_blank">
+                    <img src="{% static 'img/logos/Behance_black.svg'%}" /> 
+                 </a>
+            </p> 
+            <p> github : 
+                <a href=" https://github.com/KaparoCorp" target="_blank">
+                    <img src="{% static 'img/logos/github.svg'%}" /> 
+                 </a>
+            </p> 
+            <p> vimeo  : 
+                <a href="https://vimeo.com/user200788124" target="_blank">
+                    <img src="{% static 'img/logos/vimeo.png'%}" /> 
+                 </a>
+            </p> 
+            <p> codewars  : 
+                <a href="https://www.codewars.com/users/NjoRaw_wa_Art" target="_blank">
+                    <img src="{% static 'img/logos/codewars.svg'%}" /> 
+                 </a>
+            </p> 
+            <p> stackoverflow : 
+                <a href="https://stackoverflow.com/users/15813187/njoraw-wa-art" target="_blank">
+                    <img src="{% static 'img/logos/stackoverflow.svg'%}" /> 
+                 </a>
+            </p> 
+            <p> tumblr : 
+                <a href="https://www.tumblr.com/blog/the-real-kaparo" target="_blank" >
+                    <img src="{% static 'img/logos/tumblr_black.png'%}" /> 
+                 </a>
+            </p>       
         </div>
     </div>
 {% endblock %}

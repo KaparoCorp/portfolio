@@ -1,8 +1,53 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %} shop {% endblock title %}
+{% block stylesheet %}<link rel='stylesheet' href='{% static "shop.css" %}'>{% endblock stylesheet %}
 
 {% block content %}
-
+    <h1>Shop</h1>
+    <div class="container">
+        <div class="shopMenu">
+            <h1>Categories</h1>
+            <div class="menu">
+                    <ul id="">
+                        <li><a href="">ornaments</a></li>
+                        <li><a href="">T-shirts</a></li>
+                        <li><a href="">sishiko designs</a></li>
+                        <li><a href="">diy</a></li>
+                        
+                        {% if user.is_authenticated %}
+                            <li><a href="">upload</a></li>
+                        {% else %}
+                            <li><a href="">log in</a></li>
+                            <li><a href="">sign up</a></li>
+                            <p>we are not a brand</p>
+                        {% endif %}
+                    </ul>
+            </div>
+        </div>
+        <div class="shop">
+            <div class="imgContainer">
+                <div class="shopTop">
+                    <img src="{% static "img/ryanMode.jpg"%}" alt="" width="300px" height="300px">
+                    <img src="{% static "img/ryanMode.jpg"%}" alt="" width="300px" height="300px">
+                    <img src="{% static "img/ryanMode.jpg"%}" alt="" width="300px" height="300px">
+                    <img src="{% static "img/ryanMode.jpg"%}" alt="" width="300px" height="300px">
+                </div> 
+                <div class="shopBottom">
+                    <img src="{% static "img/ryanMode.jpg"%}" alt="" width="300px" height="300px">
+                    <img src="{% static "img/ryanMode.jpg"%}" alt="" width="300px" height="300px">
+                    <img src="{% static "img/ryanMode.jpg"%}" alt="" width="300px" height="300px">
+                    <img src="{% static "img/ryanMode.jpg"%}" alt="" width="300px" height="300px">
+                </div>
+                
+            </div>
+        </div>
+        <div class="construction">
+            <img src="{% static 'img/svg/construction.svg'%}" alt="">
+            <audio  id="my_audio" autoplay src="{%static 'audio/construction-work_audio.wav'%}" type="audio/wav"   loop="loop" controls>
+            </audio>
+        </div>
+    </div>
+    <script src="{% static 'js/shop.js'%}"></script>
 {% endblock content %}
 
