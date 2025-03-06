@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-lz_@=2$u%hav)=!%s$s=4kfogq0z%t*z+wctlmthru0y7)5!zc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0", "kaparo-39b3be3b51ea.herokuapp.com"]
+# ALLOWED_HOSTS = ["0.0.0.0", "kaparo-39b3be3b51ea.herokuapp.com"]
 
 # The `DYNO` env var is set on Heroku CI, but it's not a real Heroku app, so we have to
 # also explicitly exclude CI:
