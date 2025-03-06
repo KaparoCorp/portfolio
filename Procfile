@@ -1,1 +1,1 @@
-web: gunicorn --config ryan/gunicorn.conf.py ryan.wsgi
+web: gunicorn ryan.wsgi -log-file -
