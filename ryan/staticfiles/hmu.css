@@ -1,0 +1,32 @@
+h1{
+    text-decoration: underline dotted;
+}
+.container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container h1{
+    text-decoration: underline;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 2rem ;
+}
+
+form:hover{
+    border: 3px dotted red;
+
+}
+.btn{
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+}
+
+.socialMedia img{
+    width: 25px;
+    height: 25px;
+}
