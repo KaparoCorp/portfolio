@@ -1,1 +1,3 @@
-web: python ryan/manage.py runserver 0.0.0.0:$PORT
+web: gunicorn kaparo.wsgi --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
