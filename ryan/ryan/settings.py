@@ -228,3 +228,5 @@ LOGGING = {
         },
     },
 }
+
+django_heroku.settings(locals())    # Activate Django-Heroku.
