@@ -1,1 +1,1 @@
-web: gunicorn ryan.wsgi -log-file -
+web: python ryan/manage.py runserver 0.0.0.0 
